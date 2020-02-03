@@ -75,12 +75,8 @@ form {
   text-align:left;
   }
 #main {
-  width:490px;
+  width:100%;
   float:left;
-  }
-#sidebar {
-  width:140px;
-  float:right;
   }
 
 
@@ -191,27 +187,6 @@ p.post-footer {
   font-style:italic;
   color:gray;
   }
-
-
-/* Sidebar Content
------------------------------------------------ */
-#sidebar ul {
-  margin:0 0 1.5em;
-  padding:0 0 1.5em;
-  border-bottom:1px dotted #ccc;
-  list-style:none;
-  }
-#sidebar li {
-  margin:0;
-  padding:0 0 .25em 15px;
-  text-indent:-15px;
-  line-height:1.5em;
-  }
-#sidebar p {
-  color:black;
-  line-height:1.5em;
-  }
-
 
 /* Profile
 ----------------------------------------------- */
@@ -358,24 +333,28 @@ p.post-footer {
   <div class="post">
          
     <h3 class="post-title">
-           Welcome, Node+JS Interactive 2019 Attendees!
+           Welcome, JSConf Hawaiʻi Attendees!
     </h3>
 
     <div class="post-body">
       <div style="clear:both;"></div>
 
+    <!--
       <form action="https://vintage-bean.glitch.me//go">
         <p>Enter the names of two musicians to connect.</p>
         <div><label>Start point</label>:&nbsp;<input name="start"></div>
         <div><label>End point</label>:&nbsp;<input name="end"></div>
         <div><input type="submit"></div>
       </form>
+    -->
+    
+      <p>
+        Here are links to things I mentioned in my talk. Some of these might
+        even help you get started with <code>worker_threads</code>. 
+      </p>
 
-      <div style="clear:both;"></div>
-
-      Here are some links from my talk and elsewhere to get you started with <code>worker_threads</code>.
-      
       <ul>
+        <li><a href="/multimedia/palacefamilysteakhouse.mp3"><i>Palace Family Steak House</i> theme song (mp3)</i></a></li>
         <li><a href="https://www.nearform.com/blog/workers-in-node-js-how-to-write-a-sudoku-solving-server/">"Workers in Node.js: How to write a sudoku-solving server"</a> [NearForm] by Anna Henningsen</li>
         <li><a href="https://medium.com/@Trott/using-worker-threads-in-node-js-80494136dbb6">"Using <code>worker_threads</code> in Node.js"</a> [Medium]</li>
         <li><a href="https://medium.com/@Trott/using-worker-threads-in-node-js-part-2-a9405c72a6f0">"Using <code>worker_threads</code> in Node.js Part 2"</a> [Medium]</li>
@@ -396,45 +375,6 @@ p.post-footer {
 
 </div></div>
 <!-- End #main -->
-
-
-<!-- Begin #sidebar -->
-<div id="sidebar"><div id="sidebar2">
-  <!-- Begin #profile-container -->
-<!--
-   <div id="profile-container"><h2 class="sidebar-title">About Me</h2>
-<dl class="profile-datablock">
-<dd class="profile-data"><strong>Name:</strong>  Trott </dd>
-</dl>
-
-</div>
--->   
-  <!-- End #profile -->
-
-    <h2 class="sidebar-title">PFSH Info</h2>
-    <ul>
-      <li><a href="/events.html">Events and Shows</a></li>
-      <li><a href="/downloads.html">Music and Videos</a></li>
-      <li><a href="/about.html">About PFSH</a></li>
-<li><a href="mailto:pfsh@palacefamilysteakhouse.com">Contact Us</a></li>
-    </ul>
-
-  <h2 class="sidebar-title">Other Articles</h2>
-    <ul id="recently">
-     
-        <li><a href="/2011/09/steaks-in-space.html">Steaks In Space (Video Announcement)</a></li>
-     
-        <li><a href="/2011/07/pfsh-set-to-reopen-in-more-ways-than.html">PFSH Set To Reopen In More Ways Than One</a></li>
-     
-        <li><a href="/2011/03/wake-up-you-lazy-astronauts.html">Wake Up, You Lazy Astronauts!</a></li>
-          
-        <li><a href="/2011/01/being-smart-by-sometimes-larry-band.html">&quot;Being Smart&quot; by The Sometimes Larry Band</a></li>
-          
-        <li><a href="/2010/04/delaware-needs-national-park.html">Delaware Needs A National Park</a></li>
-     
-  </ul>
-</div></div>
-<!-- End #sidebar -->
 
 </div>
 <!-- End #content -->
