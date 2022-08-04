@@ -29,15 +29,13 @@ a:hover {
 a img {
   border-width:0;
   }
-form {
-  position: relative;
-  text-align: center;
-  border-style: solid;
-  border-width: 1px;
-  display: inline-block;
-  padding: 1rem;
-  background-color: yellow
-}
+
+/* Posts
+------------------------------------------------ */
+.post {
+  margin:.5em 0 1.5em;
+  padding-bottom:1.5em;
+  }
 
 /* Header
 ----------------------------------------------- */
@@ -72,7 +70,6 @@ form {
   width:660px;
   margin:0 auto;
   padding:0;
-  text-align:left;
   }
 #main {
   width:100%;
@@ -88,63 +85,6 @@ h2 {
   text-transform:uppercase;
   letter-spacing:.2em;
   color:#4f4f4f;
-  }
-
-
-/* Posts
------------------------------------------------ */
-.post {
-  margin:.5em 0 1.5em;
-  border-bottom:1px dotted #ccc;
-  padding-bottom:1.5em;
-  }
-.post-title {
-  margin:.25em 0 0;
-  padding:0 0 4px;
-  font-size:140%;
-  font-weight:normal;
-  line-height:1.4em;
-  color:#854200;
-  }
-.post-title a, .post-title a:visited, .post-title strong {
-  display:block;
-  text-decoration:none;
-  color:#854200;
-  font-weight:normal;
-  }
-.post-title strong, .post-title a:hover {
-  color:#333;
-  }
-.post div {
-  margin:0 0 .75em;
-  line-height:1.6em;
-  }
-p.post-footer {
-  margin:-.25em 0 0;
-  color:#ccc;
-  }
-.post-footer em {
-  font:78%/1.4em "Trebuchet MS",Trebuchet,Arial,Verdana,Sans-serif;
-  text-transform:uppercase;
-  letter-spacing:.1em;
-  }
-.post-footer em {
-  font-style:normal;
-  color:#4f4f4f;
-  margin-right:.6em;
-  }
-.comment-link {
-  margin-left:.6em;
-  }
-.post img {
-  padding:4px;
-  border:1px solid #ddd;
-  }
-.post blockquote {
-  margin:1em 20px;
-  }
-.post blockquote p {
-  margin:.75em 0;
   }
 
 /* Footer
@@ -167,24 +107,22 @@ p.post-footer {
   </style>
 
 <script>
-  var backgroundColors = new Array();
-  backgroundColors[0] = "white";
-  backgroundColors[1] = "yellow";
-  var backgroundColorsIndex = 0;
+  const backgroundColors = ["white", "yellow"];
+  let backgroundColorsIndex = 0;
 
   function readCookie(name) {
-	var nameEQ = name + "=";
-	var ca = document.cookie.split(';');
-	for(var i=0;i < ca.length;i++) {
-		var c = ca[i];
-		while (c.charAt(0)==' ') c = c.substring(1,c.length);
-		if (c.indexOf(nameEQ) == 0) return( c.substring(nameEQ.length,c.length));
-	}
-	return null;
+    const nameEQ = name + "=";
+    const ca = document.cookie.split(';');
+    for(let i=0;i < ca.length;i++) {
+      let c = ca[i];
+      while (c.charAt(0)==' ') c = c.substring(1,c.length);
+      if (c.indexOf(nameEQ) == 0) return( c.substring(nameEQ.length,c.length));
+    }
+    return null;
   }
 
   function initializeBG() {
-     backgroundColorsIndex = parseInt(readCookie('backgroundColorsIndex'));
+     backgroundColorsIndex = parseInt(readCookie('backgroundColorsIndex'), 10);
      if ( isNaN( backgroundColorsIndex )) {
         backgroundColorsIndex = 0;
      }
@@ -193,7 +131,7 @@ p.post-footer {
        
   function changeBG(index) {
     if ( index != undefined ) {
-       index = parseInt( index );
+       index = parseInt( index, 10 );
        if (( index < 0 ) || ( index >= backgroundColors.length )) {
           return false;
        }
@@ -202,7 +140,7 @@ p.post-footer {
     document.body.style.backgroundColor=backgroundColors[backgroundColorsIndex];
 
     var date = new Date();
-    date.setTime(date.getTime()+(90*24*60*60*1000)); // set cookie to expire in three month
+    date.setTime(date.getTime()+(90*24*60*60*1000)); // set cookie to expire in 90 days
     var expires = "; expires="+date.toGMTString();
     document.cookie = 'backgroundColorsIndex='+backgroundColorsIndex+expires+'; path=/';
 
@@ -215,54 +153,32 @@ p.post-footer {
 
 </head>
 
-<body id="body"><script>
-    function setAttributeOnload(object, attribute, val) {
-      if(window.addEventListener) {
-        window.addEventListener('load',
-          function(){ object[attribute] = val; }, false);
-      } else {
-        window.attachEvent('onload', function(){ object[attribute] = val; });
-      }
-    }
-  </script>
-<div id="navbar-iframe-container"></div>
-<script src="https://apis.google.com/js/plusone.js"></script>
+<body id="body">
 
 <script>
-<!--
   initializeBG(); // here instead of onload in body tag so user doesn't wait
                   // for all content to load and scripts to run
-  // -->
 </script>
 
 <div id="header">
     <a href="/">
-<!-- The next line is all one line because of an IE bug where it renders whitespace so the border is not flush with the image -->
-        <img alt="Palace Family Steak House" src="/images/logo.jpg" width="660" height="175" /></a></div>
+        <img alt="Palace Family Steak House" src="/images/logo.jpg" width="660" height="175" />
+    </a>
+</div>
 <p><br /><input type="button" value="Happy Fun Button!" onClick="changeBG()"/></p>
 <!-- Begin #content -->
 <div id="content">
 
-
 <!-- Begin #main -->
 <div id="main"><div id="main2">
-     
-  <!-- Begin .post -->
+
   <div class="post">
-         
-    <h3 class="post-title">
-      "Tanforan Parking Lot at Dusk"
-    </h3>
-
-    <div class="post-body">
-      <div style="clear:both;"></div>
-
-      <p>From the forthcoming album <i>PFSH Sings Songs of Hope and Woe</i>&hellip;</p>
-
-      <iframe width="560" height="315" src="https://www.youtube.com/embed/HKHx56yWmIQ" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
-    </div>
+    <iframe style="border: 0; width: 560px; height: 373px;" src="https://bandcamp.com/EmbeddedPlayer/album=1780016459/size=large/bgcol=ffffff/linkcol=0687f5/artwork=small/transparent=true/" seamless><a href="https://palacefamilysteakhouse.bandcamp.com/album/pfsh-sings-songs-of-hope-and-woe">PFSH Sings Songs of Hope And Woe by Palace Family Steak House</a></iframe>
   </div>
-  <!-- End .post -->
+  
+  <div class="post">
+    <iframe width="560" height="315" src="https://www.youtube.com/embed/HKHx56yWmIQ" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+  </div>
 
 </div></div>
 <!-- End #main -->
