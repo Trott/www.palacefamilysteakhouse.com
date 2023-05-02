@@ -10,25 +10,25 @@ body {
   background:white;
   margin:0;
   padding:20px;
-  font-family: Sans-Serif;
   text-align:center;
   color:black;
   }
 a:link {
   color:#325162;
-  text-decoration:none;
   }
 a:visited {
   color:#969;
-  text-decoration:none;
   }
 a:hover {
   color:#854200;
-  text-decoration:underline;
   }
 a img {
   border-width:0;
   }
+p {
+  text-align:left;
+  font-size:1.2em;
+}
 
 /* Posts
 ------------------------------------------------ */
@@ -57,7 +57,6 @@ a img {
   }
 #blog-title a {
   color:black;
-  text-decoration:none;
   }
 #blog-title a:hover {
   color:#854200;
@@ -70,136 +69,139 @@ a img {
   width:660px;
   margin:0 auto;
   padding:0;
-  }
+}
 #main {
   width:100%;
   float:left;
-  }
+}
 
 
 /* Headings
 ----------------------------------------------- */
-h2 {
-  margin:1.5em 0 .75em;
-  font:78%/1.4em "Trebuchet MS",Trebuchet,Arial,Verdana,Sans-serif;
+h1, h2 {
   text-transform:uppercase;
   letter-spacing:.2em;
   color:#4f4f4f;
-  }
+}
 
-/* Footer
------------------------------------------------ */
-#footer {
-  width:660px;
-  clear:both;
-  margin:0 auto;
-  }
-#footer hr {
-  display:none;
-  }
-#footer p {
-  margin:0;
-  padding-top:15px;
-  font:78%/1.6em "Trebuchet MS",Trebuchet,Verdana,Sans-serif;
-  text-transform:uppercase;
-  letter-spacing:.1em;
-  }
+h1 {
+  font:1.4em "Trebuchet MS",Trebuchet,Arial,Verdana,Sans-serif;
+}
+
+h2 {
+  margin:2em 0 .75em;
+  font:1.2em "Trebuchet MS",Trebuchet,Arial,Verdana,Sans-serif;
+}
   </style>
-
-<script>
-  const backgroundColors = ["white", "yellow"];
-  let backgroundColorsIndex = 0;
-
-  function readCookie(name) {
-    const nameEQ = name + "=";
-    const ca = document.cookie.split(';');
-    for(let i=0;i < ca.length;i++) {
-      let c = ca[i];
-      while (c.charAt(0)==' ') c = c.substring(1,c.length);
-      if (c.indexOf(nameEQ) == 0) return( c.substring(nameEQ.length,c.length));
-    }
-    return null;
-  }
-
-  function initializeBG() {
-     backgroundColorsIndex = parseInt(readCookie('backgroundColorsIndex'), 10);
-     if ( isNaN( backgroundColorsIndex )) {
-        backgroundColorsIndex = 0;
-     }
-     changeBG(backgroundColorsIndex)
-  } 
-       
-  function changeBG(index) {
-    if ( index != undefined ) {
-       index = parseInt( index, 10 );
-       if (( index < 0 ) || ( index >= backgroundColors.length )) {
-          return false;
-       }
-       backgroundColorsIndex = index;
-    }
-    document.body.style.backgroundColor=backgroundColors[backgroundColorsIndex];
-
-    var date = new Date();
-    date.setTime(date.getTime()+(90*24*60*60*1000)); // set cookie to expire in 90 days
-    var expires = "; expires="+date.toGMTString();
-    document.cookie = 'backgroundColorsIndex='+backgroundColorsIndex+expires+'; path=/';
-
-    backgroundColorsIndex++;
-    if (backgroundColorsIndex >= backgroundColors.length ) {
-      backgroundColorsIndex = 0;
-    }
-  }
-</script>
 
 </head>
 
 <body id="body">
-
-<script>
-  initializeBG(); // here instead of onload in body tag so user doesn't wait
-                  // for all content to load and scripts to run
-</script>
 
 <div id="header">
     <a href="/">
         <img alt="Palace Family Steak House" src="/images/logo.jpg" width="660" height="175" />
     </a>
 </div>
-<p><br /><input type="button" value="Happy Fun Button!" onClick="changeBG()"/></p>
 <!-- Begin #content -->
 <div id="content">
 
 <!-- Begin #main -->
-<div id="main"><div id="main2">
+<div id="main">
 
   <div class="post">
-    <iframe style="border: 0; width: 350px; height: 470px;" src="https://bandcamp.com/EmbeddedPlayer/album=3605366320/size=large/bgcol=ffffff/linkcol=0687f5/tracklist=false/transparent=true/" seamless><a href="https://palacefamilysteakhouse.bandcamp.com/album/songs-in-the-key-of-decemberween-volume-1">Songs in the Key of Decemberween Volume 1 by Palace Family Steak House</a></iframe>
-  </div>
+    <h1>Liner notes for<br><i>Songs in the Key of Decemberween Vol. 1</i></h1>
+  
+    <iframe style="border: 0; width: 100%; height: 42px;" src="https://bandcamp.com/EmbeddedPlayer/album=3605366320/size=small/bgcol=ffffff/linkcol=0687f5/transparent=true/" seamless><a href="https://palacefamilysteakhouse.bandcamp.com/album/songs-in-the-key-of-decemberween-volume-1">Songs in the Key of Decemberween Volume 1 by Palace Family Steak House</a></iframe>
 
-  <div class="post">
-    <iframe style="border: 0; width: 350px; height: 555px;" src="https://bandcamp.com/EmbeddedPlayer/album=3968942279/size=large/bgcol=ffffff/linkcol=0687f5/transparent=true/" seamless><a href="https://palacefamilysteakhouse.bandcamp.com/album/the-palace-family-steak-house-holiday-ep">The Palace Family Steak House Holiday EP by Palace Family Steak House</a></iframe>
-  </div>
+    <h2>"Everybody! Everybody!"</h2>
+    <p>This one was a total whim and a rush job. I didn't yet know that this was going to be a weeks-long project for me. The Strong Bad Twitter account had tweeted about the first song in the Decemberweenvent 2022 calendar, and I was going through a Guaraldi phase (that I guess I'm still going through). So I took the synth melody from the original song and turned it into a jazz bass line. Sure, it's not a walking bass line, but a lot of Guaraldi's tunes had written out ostinato bass lines on the melody rather than a walking bass line, with an obvious example being "Linus and Lucy". Another well-known example is "Cast Your Fate To The Wind".</p>
+    <p>I played the melody and some straightforward jazz harmonies on piano on top of that bass line, improvised a solo, and played the melody differently again to end it, and that was that. The solo has the bass switching to a walking line and the drums moving to a swing feel, which is also a characteristically Vince Guaraldi thing to do. "Linus and Lucy" provide an example again with the second solo of that recording, but Guaraldi did it many other times such as once again on "Cast Your Fate To The Wind".</p>
+    <p>There are two Guaraldi-isms that I put in the solo to try to maximize the evocation of Vince. There's a down-to-the-third-and-leap-up-to-the-flat-nine-on-a-dominant-seven-chord at 0:47 and there's a sort repeated smushed third thing at 0:59 that I guess we'll call a Guaraldi Third.</p>
+    <iframe width="560" height="315" src="https://www.youtube.com/embed/CXO7IIpsLcM" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+    <hr>
 
-  <div class="post">
-    <iframe width="560" height="315" src="https://www.youtube.com/embed/videoseries?list=PLC6ZA_GRq-e_k9ft7De1N-VhPik_bUrD8" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
-  </div>
+    <h2>"Stave It Off"</h2>
+    <p>This one's another rush job. I just did an intro and then the melody reharmonized with Guaraldi-ish jazz harmonies and with a bit of swing or bounce or something. I did it very quickly so I could post it the same day as the Decemberweenvent entry for this song. This was day 2, and it's when I realized I might want to do this for all 24 songs in the calendar, posting a song the same day as it is revealed. Strong Bad's Twitter account tweeted "Let’s just hope this person continues to make Vince Guaraldi Trio versions of these songs for the rest of Decemberweenvent!" The Stinkoman inside of me took that as some kind of a challenge.</p>
+    <iframe width="560" height="315" src="https://www.youtube.com/embed/nw9novCcys0" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+    <hr>
 
-  <div class="post">
-    <iframe style="border: 0; width: 560px; height: 373px;" src="https://bandcamp.com/EmbeddedPlayer/album=1780016459/size=large/bgcol=ffffff/linkcol=0687f5/artwork=small/transparent=true/"></iframe>
-  </div>
+    <h2>"Skills of an Artist"</h2>
+    <p>This one reharmonizes the melody over a chord progression that is (almost) identical to the A section of "Christmas Time Is Here" and just to make sure that isn't missed, the "Christmas Time Is Here" melody makes a brief appearance. I tweeted "There's a striking resemblance between 'Skills of an Artist' and this unused Vince Guaraldi Trio outtake from 'It's the Internet, Charlie Brown!'." As far as I know, no one believed that it was an actual Guaraldi outtake, but this was the first one where people started asking how they might get a copy. ("...anyway to get it as an mp3....?" "Drop the bandcamp link at the end of the month")</p>
+    <iframe width="560" height="315" src="https://www.youtube.com/embed/skVwx2RC8yE" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+    <hr>
 
-</div></div>
+    <h2>"<i>Caleb Rentpayer</i> Medley"</h2>
+    <p>Because the 2022 Decemberweenvent calendar version of the "Caleb Rentpayer" music includes a surprise minor-key version (the "Funeral Dirge"), this also has a minor key twist. It opens with a variation on the "Linus and Lucy" bass line. I forget if I derived it from "Love Song" somehow or if I just thought this variation worked better for the "Love Song" melody than a straight theft of the actual "Linus and Lucy" bass line. I kept the "Linus and Lucy" harmonies (Ab and B) though.  I added the "Love Song" melody played in the "horn fifths" style that the "Linus and Lucy" A section uses. Then, in the B section, we switch things up by using Eb minor instead of Eb major to match the "Funeral Dirge" minor key. I figured if I ran out of gas, and didn't end up doing all 24 days of the Decemberweenvent calendar, I wanted to be sure to do a "Linus and Lucy" homage in there somewhere. So this was it.</p>
+    <p>An editor of the HRWiki editor (who was very awesome and supportive) wrote of this one that it brought "the Peanuts style theme front-and-center. Unfortunately, I think it sort of overshadowed the Caleb Rentpayer theme itself a little. Nevertheless, I hope you're planning to keep these up. If so, I'm looking forward to the rest!"</p>
+    <p>The ride bell on the last note is meant to evoke the ride bell at the end of "Linus and Lucy" although in that recording, the bell comes after the last note rather than at the same time.</p>
+    <iframe width="560" height="315" src="https://www.youtube.com/embed/zMojwcEtRiM" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+    <hr>
+
+    <h2>"Now I'll Do a Dance"</h2>
+    <p>This was the first I introduced something resembling a bossa nova rhythm. Guaraldi was one of the early adopters of the bossa nova in jazz, using it in some of his more well-known songs like "Pebble Beach" and "Star Song". This one is basically one harmony in the bass, largely (perhaps always?) doubled by the left hand of the piano (which Guaraldi did a lot--he at least supplied a left-hand ostinato, whether or not it was doubling the bass, on "Linus and Lucy" and "Cast Your Fate To The Wind"), and me improvising stuff, dropping into the "Now I'll Do A Dance" melody from time to time. My recollection is that it's mostly one take with surprisingly few edits. I'm afraid to look at that Logic Pro file out of fear that it will destroy that story. So I'm just going with it.</p>
+    <p>Aside from the bossa-ish feel and the left-hand bass ostinato, the only Guarladi-isms that I recall intentionally including are melodies harmonized in thirds and more of those ubiquitous smushed "Guarldi thirds".</p>
+    <iframe width="560" height="315" src="https://www.youtube.com/embed/YEdybd3qAQk" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+    <hr>
+
+    <h2>"CGNU Fight Song"</h2>
+    <p>This is day six of the Decemberweenvent song calendar, and we finally get to a track that features that key component of the Guaraldi sound, 3/4 time! Sure, 3/4 time isn't all that unusual. But Guaraldi's penchant for triple meter is very noticeable, especially on the Charlie Brown Christmas soundtrack. By my count, of the 11 tracks on the original release, 6 of them are partially or entirely in 3/4 (or 3/8 in the case of "Für Elise"). Sure, there's room for argument. There are two renditions of "Christmas Time Is Here", so that gets counted twice. And "O Tannenbaum" starts in 3/4 but moves to 4/4 after the introductory solo piano chorus. The other two tracks in 3/4 are "What Child Is This?" (aka "Greensleeves") and "Skating".</p>
+    <p>But back to "CGNU Fight Song". It's in a 4/4 meter done as a march in its original version, but it really seemed to work well in 3/4 and sort of lent itself to a jazz interpretation more easily that way, at least to my ear. So it's kind of a reverse "O Tannenbaum" going on here. Guaraldi took the 3/4 "O Tannenbaum" and (after an introductory chorus), played it in 4/4. This goes the other way, taking a 4/4 song and playing it in 3/4.</p>    
+    <p>The jazz waltz feel here seemed to be very Guaraldi right off the bat. My somewhat heavy-handed melodic delivery is more Guaraldi than Bill Evans (who also had an affinity with 3/4 time) or Oscar Peterson. But that was probably less a conscious choice than it was the fact that I can't convincingly maintain a Bill Evans vibe (that delicate and elegant touch and incredible harmonic sophistication) or an Oscar Peterson vibe (that powerful and undeniable swing and effortless dexterity).</p>    
+    <p>On the solo, I don't think there are any Guaraldi-isms that I haven't used on previous tracks. I hear some smushed thirds and some harmonize-the-melody-note-with-a-third, and it sounds like I use the descend-to-third-and-jump-up-to-flat-nine-which-resolves-to-the-root-on-a-dominant-seventh-chord thing twice.</p>    
+    <p>The one new Guaraldi-ism (or, if it isn't new on this track, then at least I haven't mentioned it on any of the text for the previous tracks) is the first chord that introduces the track. It's a C13b9. The 13b9 chord was used a lot by Guaraldi. The chord Guaraldi plays at the end of the 3/4 chorus on "O Tannenbaum" that sets up the band to come in for the 4/4 part is also a C13b9. A voicing for it frequently used by Guaraldi (and the one I use here) is (from low to high) the root and dominant seventh of the chord in the left hand and the flat-9, third, and 13 of the chord in the right hand. Those right-hand notes enharmonically are a first-inversion A major triad which is, I have to imagine, how Guaraldi (and probably everyone else, including me) thought of the chord when playing it during comping or a solo piano performance: Root and seventh in the left hand, and a first-inversion major triad with the 13 of the chord as the root.</p>    
+    <p>I keep calling it the 13 and not the 6 because the 6 implies a tonic or maybe subdominant chord. Calling it the 13 implies a dominant chord. The reasons why are beyond the scope of anything I want to include in this text, but they also don't matter. That's the convention. If you see C13 in a fake book, its' telling you to include a dominant seventh (B-flat) in the chord. If you see C6, it means probably don't include the seventh at all but if you do include the seventh, be sure it's a major seventh (B-natural).</p>    
+    <p>OK, I'm going back to the 3/4 thing for one final note. Guaraldi used 3/4 time a lot, especially in scoring music for Peanuts. The last thing he scored right before his death in 1976 was It's Arbor Day, Charlie Brown. The main theme from that, sometimes called "Young Man's Fancy", is in 3/4. I find it frustrating that, at least as of this writing, the Wikipedia article for It's Arbor Day, Charlie Brown describes that track as a "variation" on "Christmas Time Is Here". It is not. Derrick Bang correctly describes it, instead, as "vaguely similar". The vague similarities are that they are in the same key (F major), they are both in 3/4 time, and the opening melodic phrase of the songs are similar. But the entire rest of the melody is completely different. The chords are nothing alike. Even the structure is completely different. ("Christmas Time Is Here" is conventional 32-bar AABA while "Young Man's Fancy" is a disorienting 36-bar AAB form with 12-bar sections.) I recorded "Young Man's Fancy" with my friend Matt Snyder playing clarinet. Check it out at <a href="https://www.youtube.com/watch?v=lp2S5bWHDuw">https://www.youtube.com/watch?v=lp2S5bWHDuw</a>.</p>
+    <iframe width="560" height="315" src="https://www.youtube.com/embed/T5VYot2-NTQ" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+    <hr>
+
+    <h2>"Videlectrix Chime/StrongBad Zone"</h2>
+    <p>The V7-bIImaj7 (G7-Dbmaj7) deceptive cadence I used to end the "Videlectrix Chime" intro is taken from an arrangement of "Night and Day" by Cole Porter but I cannot remember where I first came across it.  I also use that deceptive cadence (in a different key) at the end of my video of <a href="https://www.youtube.com/watch?v=MyJYCa2rcS0">me playing Vince Guaraldi's "Pebble Beach"</a>. I use it at the end of my song "Flatware Force" too but I don't (yet?) have a video for that one. (I might need to make one. It's a good song!)</p>
+    <p>The gap between the last two chords of the "Videlectrix Chime" intro might be the best 4 seconds of music I have ever recorded.</p>
+    <p>As with "Now I'll Do A Dance", "StrongBad Zone" is performed as a single static harmony. I just improvised a bunch, reharmonized the "Videlectrix Chime" as a melody under the "StrongBad Zone" bass ostinato and that was that. There are certainly a few Guaraldi-isms in there, but nothing new I don't think: smushed thirds, harmonizing in thirds, and bass-and-piano playing the ostinato line together. The piano figure at 1:14 is a reference to Bill Evans's iconic piano figure on "All Blues" by Miles Davis from <i>Kind of Blue</i>.</p>
+    <iframe width="560" height="315" src="https://www.youtube.com/embed/sOTVQXcUwho" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+    <hr>
+
+    <h2>"Smells Like Peanut Action"</h2>
+    <p>Once again, on the melody, we have the bass and piano playing in unison, like Guaraldi did a lot. And once again, like a lot of Guaraldi performances, the head uses straight eighths while the improvised solo starting at 0:41 uses swung eighths. That piano solo starts with that Guaraldian smushed third on a major chord. At 0:43, it moves immediately to the Guaraldian step-down-to-the-third-of-a-dominant-seven-chord-before-jumping-up-to-the-flat-nine-resolving-stepwise-down-to-the-tonic. Let's just start calling that a "Guaraldian 3-b9 lick" from now on. Next, it's echoed at 0:45 in rhythm and shape by a Guaraldian enclosure on the third of the tonic chord jumping up to the root and resolving down to the 7th of the tonic scale, but since it's played in a staggered way, it ends up being the third of the next chord (the dominant chord).</p>
+    <p>It was kind of obvious to do a "Smells Like Teen Spirit" quote in a song titled "Smells Like Peanut Action". I did it twice. It's easy to miss that the opening two bars played solely on the bass is basically the main guitar riff from "Smells Like Teen Spirit". Much more obvious is at 1:37 at the opening of the coda solo. In addition to the solo melody being an obvious quote of "Smells Like Teen Spirit", the chords have changed to be the same as "Smells Like Teen Spirit" (Fm Bbm Ab Db) but turned into jazz chords in a straightforward fashion (Fm9 Bbm9 Abmaj7 Dbmaj9). Up until this point, the tune had been in F major. The abrupt switch to the parallel minor is abetted by the similarly abrupt (and Guaraldian) shift from straight time to swung time. Whereas the first solo had a lot of intentional nods to Guaraldi's style, this solo is more my improvisational piano voice.</p>
+    <p>The last chord of the song at 2:18 is a minor major seventh chord with a ninth on top. The minor major seventh chord is sometimes called the Hitchcock chord, mostly due to Bernard Herrmann's use of it in the soundtrack to the Alfred Hitchcock film <i>Psycho</i>. However, in our household, especially when a ninth is added on top, we call it "the Dangeresque chord" due to its use as the final chord of "The Theme from <i>Dangeresque II</i>". It's the guitar chord that immediately follows "Or did I?" at the end. Or at least, that's what I think that chord is, and that's what matters. Anyway, I first started using this chord a lot after transcribing Michel Camilo's recording of "Softly, as in a Morning Sunrise" from his album <i>On Fire</i>. That performance ends with the Dangeresque chord (or at least that's how I hear it). I even included, at 2:21, the same after-the-chord flourish that Camilo uses at the end of "Softly, as in a Morning Sunrise". Come to think of it, I transcribed the piano solo on that recording a long time ago and played a variation of Camilo's arrangement with a quartet I was in. Camilo's solo on that recording heavily informs the melodic and rhythmic language of the coda solo here, although Camilo is about 4 billion times the player I will ever be.</p>
+    <iframe width="560" height="315" src="https://www.youtube.com/embed/1qhSCEvER94" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+    <hr>
+
+    <h2>"Meet Marshie"</h2>
+    <p>This is a song from Homestar Runner done in the style of the Vince Guaraldi Trio's soundtrack to the A Charlie Brown Christmas television special.</p>
+    <p>Obviously, this one is an homage to "My Little Drum". I ended up making the sections 7 bars long instead of the usual 8. The "My Little Drum" arrangement seemed to accommodate the "Meet Marshie" melody better that way.</p>
+    <p>The piano solo borrows very heavily from Guaraldi's solo on "My Little Drum". Theft, even.</p>
+    <p>This was the first video where the Strong Bad Twitter account responded with a video of its own that had Marshie getting threatening and Homestar doing the countermelody: <a href="https://twitter.com/StrongBadActual/status/1601336467787513857">https://twitter.com/StrongBadActual/status/1601336467787513857</a></p>
+    <iframe width="560" height="315" src="https://www.youtube.com/embed/QN9-e1EEXlQ" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+    <hr>
+
+    <h2>"No Probalo"</h2>
+    <p>This one is obviously more an homage to Steely Dan's "Rikki Don't Lose That Number" than to anything Vince Guaraldi ever recorded.</p>
+    <p>I transposed this song to E major so it would be in the same key as "Rikki". And although I changed the bass line ever so slightly for reasons that I now cannot remember, it is still very recognizable as the opening bass line to "Rikki". Steely Dan famously got that bass line intro from Horace Silver's "Song For My Father" (which is in F major) but I generally think of that bass figure as a standard bossa nova figure. I'm probably wrong about the bossa nova part, but the fact that it evokes bossa nova for me made it something I could somehow justify as vaguely Vince Guaraldi-like. Guaraldi was big into bossa nova. He recorded several albums with with Brazilian guitarist Bola Sete and performed with him for years. Guaraldi's first big hit album was music from and inspired by a Brazilian film. Guaraldi was as associated with Brazilian music as an Italian-American lifelong San Franciscan could be.</p>
+    <p>Just like on "Rikki", I added that wind-chime-type flourish on the intro as well as the snare rimshot. But once the melody kicks in, I try (and, in my opinion, don't quite succeed) to make it more Guaraldi by harmonizing the melody in an almost-horn-fifths Guaraldi style. For the bridge, I harmonized things with a succession of Steely Dan-like chords and end with pre-chorus piano lick from "Rikki".</p>
+    <p>I left room in the arrangement for a short coda vamp solo but ended up just playing one rather conventional lick (in thirds again) before inserting the "Rikki Don't Lose That Number" ending. The wind chimes return just like on "Rikki" (although more noticeably here) and I play the vocal harmonies as a piano melody.</p>
+    <p>When I posted this to Twitter, I wrote: "Some Guaraldi components are in this, but I think they get a little lost to...uh...another...uh..subtle influence...." The Strong Bad Twitter account responded with a tweet starting with "Steel yourself, Dan" and posting a video using an edited version of this as a theme for a Senor Cardgage sitcom. That was very rewarding for me. You can see it at <a href="https://twitter.com/StrongBadActual/status/1601634632545447937">https://twitter.com/StrongBadActual/status/1601634632545447937</a>.</p>
+    <iframe width="560" height="315" src="https://www.youtube.com/embed/U5L-2_S2WCc" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+    <hr>
+
+    <h2>"3 Times Halloween Funjob"</h2>
+    <p>Offhand, I'm not sure I did much to Guaraldi-ize this beyond make it a melow piano jazz trio. Block chords seem to be big with every jazz piano player, but offhand, I can't think of a Guaraldi track that has block chords similar to the style played here. I think this is me taking the Homestar Runner song, applying Vince Guaraldi Trio instrumentation and jazz sensibilities to it, trying to simulate the vibe of the A Charlie Brown Christmas soundtrack, and otherwise inserting myself into the song. It's short and, like most of these tracks, was done very quickly, but I'm pretty happy with it.</p>
+    <iframe width="560" height="315" src="https://www.youtube.com/embed/NJwLoL63kdc" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+    <hr>
+
+    <h2>"<i>Cheat Commandos</i> Theme Song"</h2>
+    <p>While the "CGNU Fight Song" was a march that was easier for me to jazz up in a Guaraldi-ish 3/4 time, this is also march-like (or at least it is to my ear) but I left it in 4/4. But it switches to 3/4 in the middle section. Since it's in a minor key, I went with an homage to the minor key 3/4 song on the A Charlie Brown Christmas soundtrack, which is "What Child Is This" (also known as "Greensleeves"). And as in "Skills of an Artist", to make the homage unmistakable, I straight-up played a recognizable segment of the subject of the homage in the middle "solo" section. I put "solo" in quotation marks because, unlike in "Skills of an Artist", there isn't a solo on this one. It's just the "Cheat Commandos Theme Song" melody (0:00), followed by the "What Child Is This" bridge-type thing (0:14), followed by a recap of the "Cheat Commands Theme Song" (0:26).</p>
+    <p>The drum roll at 0:37 was more work for me to program than I would have liked it to be, but I wanted it to be there so that I could make a specific Twitter joke that references a specific Homestar Runner toon where Gunhaver changes the Cheat Commandos catch phrase from "Rock rock on!" to "Riggidy-roll!"  From https://twitter.com/trott/status/1602315371390062592: "I tried ending this with the drums rock-rocking on but went with a riggidy-roll instead." Get it? drum roll, riggidy-roll? Yeah, I'm not very funny a lot of the time.</p>
+    <p>The very end that (0:39) where Fm6/9 chord is hit twice followed up an upward flourish on the keyboard and then a somewhat odd descending semitone in the left hand (from Db to C) is an approximation of the ending of "What Child Is This".</p>
+    <iframe width="560" height="315" src="https://www.youtube.com/embed/Jer74Wh4TY8" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+  </div>
+</div>
 <!-- End #main -->
 
 </div>
 <!-- End #content -->
-
-<!-- Begin #footer -->
-<div id="footer"><hr />
-  <p><!--This is an optional footer. If you want text here, place it inside these tags, and remove this comment. -->
-</p>
-</div>
-<!-- End #footer -->
 
 <!-- Begin Google Analytics Code -->
 <script src="https://www.google-analytics.com/urchin.js">
